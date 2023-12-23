@@ -67,6 +67,12 @@ function Index() {
               {state.state === 'UNKNOWN' ? null : state.state === 'SIGNED_OUT' ? <SignInButton /> : <SignOutButton />}
               <button onClick={() => setIsOpen(true)}>Display Dialog</button>
             </div>
+            <div className="mt-4 grid gap-2">
+              <button className="btn btn-info">Info</button>
+              <button className="btn btn-success">Success</button>
+              <button className="btn btn-warning">Warning</button>
+              <button className="btn btn-error">Error</button>
+            </div>
           </div>
         </div>
       </div>
