@@ -4,6 +4,7 @@ import { useAuthState } from '~/components/contexts/UserContext';
 import { SignInButton } from '~/components/domain/auth/SignInButton';
 import { SignOutButton } from '~/components/domain/auth/SignOutButton';
 import { Head } from '~/components/shared/Head';
+import { Nav } from '~/components/shared/Nav';
 
 function Index() {
   const { state } = useAuthState();
@@ -13,6 +14,7 @@ function Index() {
   return (
     <>
       <Head title="TOP PAGE" />
+      <Nav />
       <div className="hero min-h-screen">
         <div className="text-center hero-content">
           <div>
