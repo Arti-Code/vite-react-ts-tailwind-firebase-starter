@@ -21,3 +21,24 @@ export const SignInButton = () => {
     </button>
   );
 };
+
+
+export const SignInNavButton = () => {
+  const handleClick = () => {
+    const provider = new GoogleAuthProvider();
+    const auth = useAuth();
+    // @see https://firebase.google.com/docs/auth/web/google-signin
+    auth.languageCode = "en";
+
+    signInWithRedirect(auth, provider);
+  };
+// <a className="btn btn-ghost rounded-btn">New</a>
+  return (
+    <a
+      onClick={handleClick}
+      className="btn btn-outline btn-success rounded-btn"
+    >
+      SignIn
+    </a>
+  );
+};

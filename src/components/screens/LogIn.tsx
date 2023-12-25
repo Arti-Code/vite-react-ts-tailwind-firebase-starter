@@ -5,7 +5,7 @@ import { SignOutButton } from '~/components/domain/auth/SignOutButton';
 import { Head } from '~/components/shared/Head';
 import DeviceList from '~/components/shared/DeviceList';
 
-function Index() {
+function LogIn() {
   const { state } = useAuthState();
   const [isOpen, setIsOpen] = useState(true);
   const completeButtonRef = useRef(null);
@@ -17,8 +17,7 @@ function Index() {
       <div className="hero min-h-screen">
         <div className="text-center hero-content">
               <div className="grid">
-                {/* {state.state === 'UNKNOWN' ? null : state.state === 'SIGNED_OUT' ? <SignInButton /> : <SignOutButton />} */}
-                <DeviceList />
+                {state.state === 'UNKNOWN' ? null : state.state === 'SIGNED_OUT' ? <SignInButton /> : <SignOutButton />}
               </div>
         </div>
       </div>
@@ -26,4 +25,4 @@ function Index() {
   );
 }
 
-export default Index;
+export default LogIn;

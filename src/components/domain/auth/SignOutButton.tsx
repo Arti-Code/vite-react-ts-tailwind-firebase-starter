@@ -18,3 +18,20 @@ export const SignOutButton = (props: Props) => {
     </button>
   );
 };
+
+
+export const SignOutNavButton = () => {
+  const handleClick = () => {
+    const auth = useAuth();
+    auth.signOut();
+  };
+// <a className="btn btn-ghost rounded-btn">New</a>
+  return (
+    <a
+      onClick={handleClick}
+      className="btn btn-outline btn-warning rounded-btn"
+    >
+      SignOut
+    </a>
+  );
+};

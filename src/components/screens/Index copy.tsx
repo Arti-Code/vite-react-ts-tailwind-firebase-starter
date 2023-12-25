@@ -5,7 +5,6 @@ import { SignInButton } from '~/components/domain/auth/SignInButton';
 import { SignOutButton } from '~/components/domain/auth/SignOutButton';
 import { Head } from '~/components/shared/Head';
 import { Nav } from '~/components/shared/Nav';
-import { Nav2 } from '~/components/shared/Nav2';
 
 function Index() {
   const { state } = useAuthState();
@@ -15,7 +14,7 @@ function Index() {
   return (
     <>
       <Head title="Robotic Works" />
-      <Nav2 />
+      <Nav />
       <div className="hero min-h-screen">
         <div className="text-center hero-content">
           <div>
